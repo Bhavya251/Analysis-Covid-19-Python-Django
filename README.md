@@ -16,7 +16,7 @@
 ##### run `python manage.py runserver` command
 ##### Above command will run the project on the local-server.
 ##### after successful execution of above command open this url `http://127.0.0.1:8000/` in the browser. 
-![Succesful execution output]()
+![Succesful execution output](https://github.com/Bhavya251/Analysis-Covid-19-Python-Django/blob/main/terminal_command.png)
 
 
 
