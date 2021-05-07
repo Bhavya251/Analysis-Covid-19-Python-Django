@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Capstone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  form{
+    display: inline-grid;
+  }
+</style>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="./">Mortality</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="./">Home</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container text-center">
+  <h2>Want To Know Mortality with your Dataset ?</h2>
+  <h3>Download Template to get Mortality</h3><br>
+  <a href={{url}}> <button type="button" class="btn btn-success" href={{url}}>Sample Template</button> </a>
+  <br>
+  <br> 
+</div>
+
+<div class="container text-center">
+  <form method="POST" action="/uplaod_csv" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h3>Upload: </h3>
+    <input class="center-block btn btn-default" name="csv_file" type="file"/> <br/> 
+    <input type="submit" class="btn btn-success text-center" value="Submit">
+  </form>
+</div> 
+
+
+<div class="container text-center">
+  <h2> Download our dataset.</h2>
+  
+  <a href='https://drive.google.com/file/d/1xfxb_cD6OkaSUMgkRCTawFkFruAdkgsK/view?usp=sharing' target="_blank" class="btn btn-primary"> Download Dataset Description </a> 
+  <a href="https://drive.google.com/file/d/1DLaZB-yxqc6FZioFDJKBKHMhUn6mlBJ3/view?usp=sharing" target="_blank" class="btn btn-primary"> Download Dataset </a>
+</div>
+
+</body>
+</html>
